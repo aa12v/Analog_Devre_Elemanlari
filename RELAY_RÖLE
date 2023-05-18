@@ -53,4 +53,31 @@ Yani, manyetik bobin veya elektromıknatıs, AC tetiklemeli rölenin temel bile�
 1.4-) Röle Çeşitleri
 
 	Rölelerin, farklı işlevlere ve uygulamalara yönelik olarak çeşitli tipleri mevcuttur. Bunlar; Elektromanyetik Röleler, Termal Röleler, Katı Hal Röleleri, Zaman Röleleri ve Güç Röleleri olarak örnek verilebilir.
+
+1.5-) Röle Soketi (RELAY SOCKET)
+
+24V DC 1,2W (Bobin Voltajı - Bobin Gücü) -> Röle bobini 24 volt DC güç kaynagı ile çalıştığını ve 24 volt gerilim uygulandığında röle bobininin güç tüketiminin 1,2 Watt olduğunu belirtir. Bobin gücü değeri rölenin elektrik devresindeki enerji tüketimini temsil eder.
+
+(__/__) 250V AC max 10A (Maksimum Kontak Değerleri) -> Bu ifade rölenin anahtarlamak için tasarlandığı maksimum voltaj ve akım değerlerini gösterir. Bu röleye ait kontakların maksimum 250 volt alternatif gerilime ve maksimum 10 ampere kadar akımlara dayanabilecegini belirtir.
+
+Röle için;
+Ortak Uç(COM) : 1 ile gösterilir.
+Kapalı Uç     : 2 ile gösterilir.
+Açık Uç       : 4 ile gösterilir. 
+
+COM (Common): COM, "common" yani "ortak" anlamına gelir. Bir anahtarın veya rölenin ortak terminallerini temsil eder. Bu terminal, diğer bağlantı noktalarıyla bağlantılıdır ve anahtarlama veya röleme işleminin gerçekleştiği noktadır. Kontakta hareketli uca ortak uç denilir.
+
+COIL: COIL, "coil" yani "bobin" anlamına gelir. Bobin, elektromanyetik bir alan oluşturan bir sargıdır. COIL sembolü, rölenin veya elektromanyetik cihazın bobin bağlantılarını temsil eder. Bobine uygun akım uygulandığında, manyetik alan oluşturulur ve bu da rölenin veya cihazın çalışmasını etkiler.
+
+11: 1.Grubun 1. Kontagı -> Ortak Uç
+12: 1.Grubun 2. Kontagı -> Kapalı Kontagı
+14: 1.Grubun 4. Kontagı -> Açık Kontagı
+21: 2.Grubun 1. Kontagı
+22: 2.Grubun 2. Kontagı
+24: 2.Grubun 4. Kontagı
+
+1.5.1-) Röle Soketinde Bobin Ucu Bulma
+
+	Multimetre de direnç ölçüm kademesine getiriyoruz ve röle soketinde klemenslere ölçü aletimizin uçlarını baglıyoruz. Direnç okudugumuz kısımda bobin(coil) uçları oldugu anlamına gelmektedir. Eger herhangi bir direnç degeri göremezsek ya da tüm klemeslerde sonsuz deger görürsek rölenin bobin uçları kopmuş olabilir demektir. Direnç degeri röleden röleye değişir.
+
 _______________________________________________________________________________________________________________________________________________________________________
