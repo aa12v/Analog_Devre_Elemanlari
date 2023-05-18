@@ -1,0 +1,56 @@
+_______________________________________________________________________________________________________________________________________________________________________
+1.1-) Röle (RELAY) Nedir?
+
+	Röle, elektrik devrelerinde kullanılan bir anahtarlama cihazıdır. Rölenin temel amacı, kontrol devresindeki düşük güçlü bir sinyalin röleye iletilmesiyle yüksek güçlü bir devrede açma veya kapama işlemini kontrol edebilmektir.
+
+	Röleler iki ana bileşenden oluşur, bu bileşenler; elektromanyetik bobin ve anahtarlamayı kontrol eden bir kontak mekanizmasıdır. Rölenin bobini, kontrol devresinden iletilen sinyale yanıt olarak, manyetik bir alan oluşturur ve bu manyetik alan, kontak mekanizmasını harekete geçirir. Kontak mekanizması, manyetik alan etkisiyle hareket ederek açılır veya kapanır, böylece ana devredeki akım akışını kontrol ederek anahtarlamayı gerçekleştirir.
+
+	Kontakların normalde olan durumlarını ifade etmek için NO (Normally Open) ve NC (Normally Closed) terimleri kullanılır. NO kontaklar, röle tetiklenmediğinde yani kontrol sinyali uygulanmadığında açık konumda bulunduklarını belirtir. Röle tetiklendiğinde, NO kontaklar kapanır ve akım yolunu açar. NC kontaklar, röle tetiklenmediğinde yani kontrol sinyali uygulanmadığında kapalı konumda bulunur. Röle tetiklendiğinde, NC kontaklar açılır ve akım yolunu kapatır.
+
+1.2-) Röle Tetikleme
+
+Rölenin tetiklenmesi için yaygın olarak kullanılan iki yöntem vardır. Bu yöntemler;
+
+1.2.1-) Doğrudan Akım (DC) Tetikleme
+	
+	DC tetiklemeli rölelerde manyetik bobin veya elektromıknatıs bulunur ve manyetik bir alan oluşturur. Ancak, manyetik alanın değişimiyle hareket eden bir elektromıknatıs mekanizması yoktur. Manyetik alan sabit kalır ve enerji depolar. Kontaklar manyetik alanın etkisiyle değil manyetik alanın depoladığı enerji ile hareket eder. 
+
+	DC tetiklemeli rölelerde manyetik bobin veya elektromıknatıs aynı görevi yerine getirir. Manyetik bobin veya elektromıknatıs, rölenin içerisinde manyetik alanı üretmek ve depolamak için kullanılır. DC tetiklemeli rölelerde manyetik bobin veya elektromıknatıs, doğru akım (DC) ile tetiklenir.
+
+	Manyetik alanın üretilip depolanması, rölenin anahtar kontaklarını hareket ettirmek için kullanılır. Manyetik alanın enerjisi, kontakların açılması veya kapanması için gerekli olan gücü sağlar. Manyetik alanın etkisiyle kontaklar hareket eder ve ana devrenin durumunu değiştirir. 
+
+	DC tetiklemeli rölelerde manyetik bobin ve elektromıknatıs arasında kullanım tercihi, rölenin tasarımına ve işlevine bağlıdır. Genel olarak, manyetik bobin ve elektronik mıknatısın kullanılma durumları aşağıdaki gibi olabilir:
+
+1.2.1.1-) Manyetik Bobin İçin;
+
+	Daha basit DC tetiklemeli rölelerde tercih edilebilir. Bu rölelerde manyetik bobin, enerji depolamak ve manyetik alan oluşturmak için yeterlidir.
+
+1.2.1.2-) Elektronik Mıknatıs İçin;
+
+	Manyetik alanın daha hassas ve hızlı anahtarlanması gerektiğinde, manyetik alanı daha güçlü şekilde üretilmesi gerektiğinde ve manyetik alanın uzaktan kontrolünü sağlamak gerektiğinde kullanılması daha mantıklıdır.
+
+	Özellikle karmaşık ve özelleştirilmiş uygulamalarda, manyetik bobin ve elektronik mıknatısın kombinasyonları da kullanılabilir. Tasarımın gereksinimlerine ve uygulamanın spesifik detaylarına bağlı olarak, mühendisler hangi bileşenin kullanılacağına karar verir.
+
+
+1.2.2-) Alternatif Akım (AC) Tetikleme
+	
+	AC tetiklemeli rölelerde ise manyetik bobin ve elektromıknatıs bulunur. AC tetiklemeli rölelerde, manyetik alanı üreten bobin, birincil sargı ve ikincil sargıdan oluşur. Birincil sargı, tetikleme gerilimini alır ve bu gerilimde alternatif akım (AC) bulunur. Bu sargıdaki akım, manyetik alanı sürekli olarak değiştirir. İkincil sargı, manyetik alanın değişimine tepki vererek elektromıknatısı hareket ettirir.
+
+Yani, manyetik bobin veya elektromıknatıs, AC tetiklemeli rölenin temel bileşenidir. Bobin, manyetik alan üretmek için sarımlardan oluşur ve elektromıknatısın hareketini sağlar. Bu hareket, kontakların durumunu değiştirmek için kullanılır.
+
+	Özet olarak; AC tetiklemeli rölelerde manyetik bobin ve elektromıknatıs bulunur, manyetik bobin hem manyetik alan oluşturur hem de oluşturduğu manyetik alanın değişimi ile elektromıknatısın hareketini sağlar. DC tetiklemeli rölelerde ise manyetik bobin veya elektromıknatıs bulunur, ürettikleri manyetik alanı depolarlar ve depolanan manyetik alan, kontakların durumunu değiştirmek için kullanılır.
+
+1.3-) Örnek
+
+	Röle kullanımına örnek verecek olursak; bir düğmeye basarak bir lambayı açmak için röle kullanabiliriz. 
+1-) Düğmeye basıldığında, kontrol devresindeki düşük güçlü sinyal röleye iletilir. 
+2-) Rölenin bobini, kontrol devresinden gelen sinyale yanıt olarak manyetik bir alan oluşturur.
+3-) Bu manyetik alan, kontak mekanizmasını harekete geçirir. Kontaklar kapanır ve yüksek güçlü ana devredeki akım akışı sağlanarak lamba yanar.
+    Düğme bırakıldığında, rölenin bobini manyetik alanı kaldırır, kontaklar açılır ve lamba söner. 
+
+	Bu şekilde, düşük güçlü bir sinyalin kontrol devresini tetiklemesiyle, röle yüksek güçlü bir devredeki anahtarlama işlemini gerçekleştirir.
+
+1.4-) Röle Çeşitleri
+
+	Rölelerin, farklı işlevlere ve uygulamalara yönelik olarak çeşitli tipleri mevcuttur. Bunlar; Elektromanyetik Röleler, Termal Röleler, Katı Hal Röleleri, Zaman Röleleri ve Güç Röleleri olarak örnek verilebilir.
+_______________________________________________________________________________________________________________________________________________________________________
