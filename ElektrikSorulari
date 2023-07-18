@@ -1,0 +1,115 @@
+__________________________________________________________________________________________________________________________
+1-)  Röle (RELAY) Nedir?
+
+	Röle, elektrik devrelerinde kullanılan bir anahtarlama cihazıdır. Rölenin temel amacı, kontrol devresindeki düşük güçlü bir sinyalin röleye iletilmesiyle yüksek güçlü bir devrede açma veya kapama işlemini kontrol edebilmektir.
+
+	Röleler iki ana bileşenden oluşur, bu bileşenler; elektromanyetik bobin ve anahtarlamayı kontrol eden bir kontak mekanizmasıdır. Rölenin bobini, kontrol devresinden iletilen sinyale yanıt olarak, manyetik bir alan oluşturur ve bu manyetik alan, kontak mekanizmasını harekete geçirir. Kontak mekanizması, manyetik alan etkisiyle hareket eder açılır veya kapanır, böylece ana devredeki akım akışını kontrol ederek anahtarlamayı gerçekleştirir.
+
+	Kontakların normalde olan durumlarını ifade etmek için NO (Normally Open) ve NC (Normally Closed) terimleri kullanılır.
+
+NO (Normally Open): NO kontaklar, röle tetiklenmediğinde yani kontrol sinyali uygulanmadığında açık konumda bulunduklarını belirtir. Röle tetiklendiğinde, NO kontaklar kapanır ve akım yolunu açar.
+
+NC (Normally Closed): NC kontaklar, röle tetiklenmediğinde yani kontrol sinyali uygulanmadığında kapalı konumda bulunur. Röle tetiklendiğinde, NC kontaklar açılır ve akım yolunu kapatır.
+	
+	Örneğin; bir düğmeye basarak bir lambayı açmak için röle kullanabiliriz. 
+1-) Düğmeye basıldığında, kontrol devresindeki düşük güçlü sinyal röleye iletilir. 
+2-) Rölenin bobini, kontrol devresinden gelen sinyale yanıt olarak manyetik bir alan oluşturur.
+3-) Bu manyetik alan, kontak mekanizmasını harekete geçirir. Kontaklar kapanır ve yüksek güçlü ana devredeki akım akışı sağlanarak lamba yanar.
+    Düğme bırakıldığında, rölenin bobini manyetik alanı kaldırır, kontaklar açılır ve lamba söner. 
+
+	Bu şekilde, düşük güçlü bir sinyalin kontrol devresini tetiklemesiyle, röle yüksek güçlü bir devredeki anahtarlama işlemini gerçekleştirir.
+
+	Rölelerin, farklı işlevlere ve uygulamalara yönelik olarak çeşitli tipleri mevcuttur. Bunlar; Elektromanyetik Röleler, Termal Röleler, Katı Hal Röleleri, Zaman Röleleri ve Güç Röleleri
+
+
+
+_____________________________________________________________________________SÖZLÜK____________________________________________________________________________________
+Anahtarlama: Elektrik devrelerinde akımın akışını kontrol etme yani elektrik devresindeki akımı açma veya kapama durumu olarak tanımlanabilir. Anahtarlama cihazı ise bu işlemi gerçekleştiren bir elektriksel bileşendir.
+
+Kontrol devresi: Bir sistemi veya cihazı kontrol etmek amacıyla kullanılan düşük güçlü bir elektrik devresidir. Kontrol devresi, genellikle bir anahtar, düğme, sensör veya mikrodenetleyici gibi bir bileşen olabilir.Kontrol devresi, düşük gerilimli ve düşük akımlı bir devredir. 
+
+
+
+_____________________________________________________________________________SÖZLÜK____________________________________________________________________________________
+
+Elektromanyetik Röleler: Ana güç devrelerini açma/kapama işlevini gerçekleştirirler.
+
+Termal Röleler: Aşırı akım veya aşırı ısınma gibi belirli koşulların algılanması durumunda devreyi korumak için kullanılır.
+
+Katı Hal Röleleri: Elektromekanik kontaklara sahip olmayan yarıiletken cihazlardır. Kontrol devresine uygulanan düşük güçlü bir sinyal, optik sensör veya optik izolatör tarafından algılanır ve yarıiletken anahtarlama bileşeni üzerindeki akım geçişini tetikler.
+
+Zaman Röleleri: Belirli bir zaman gecikme süresi boyunca açma veya kapama işlemi gerçekleştiren rölelerdir.
+Güç Röleleri: Yüksek güç devrelerini kontrol etmek için kullanılan dayanıklı rölelerdir. Yüksek akım ve gerilim değerlerine dayanabilme özellikleri vardır. 
+
+-Elektromanyetik bobin: Elektrik enerjisini manyetik alana dönüştüren bir bileşendir. Genellikle bir tel veya sarım bobini şeklinde yapılır. Bobin içerisinde dolaşan akım, manyetik alanı oluşturur ve bu alan bobinin etrafında şekillenir.
+
+-Yük: Devrede enerji dönüşümü gerçekleştiren ve belirli bir işi yapmak için elektrik enerjisini kullanan bir elemandır. Yükler, genellikle dirençler, lambalar, motorlar, hoparlörler, transformatörler, elektronik devreler veya diğer elektrikli cihazlar şeklinde olabilir. Bu yükler, devreye bağlandıklarında elektrik akımını tüketirler veya dönüştürürler. Örneğin, bir direnç yükü, elektrik akımını ısı enerjisine dönüştürerek enerjiyi tüketir. Bir lamba yükü, elektrik akımını ışık enerjisine dönüştürerek çalışır. Bir motor yükü, elektrik akımını mekanik enerjiye dönüştürerek dönme hareketi yapar. Bir hoparlör yükü, elektrik akımını ses enerjisine dönüştürerek ses çıkarır.
+
+Röleler, kontrol devresine uygulanan bir sinyal ile tetiklenir. Bu sinyal, rölenin çalışmasını sağlayacak olan elektromanyetik bobini etkiler. İşte rölenin tetiklenmesi için yaygın olarak kullanılan iki yöntem:
+
+Doğrudan Akım (DC) Tetikleme:
+
+DC tetikleme için, rölenin bobinine doğru bir akım uygulanması gerekmektedir.
+Kontrol devresindeki anahtar veya transistör gibi bir bileşen, bobine uygun bir akımı sağlamak için kullanılır.
+Anahtar veya transistör, devredeki bir düğme veya dijital sinyal gibi kontrol sinyalini kontrol eder.
+Kontrol sinyali tetiklendiğinde, anahtar veya transistör bobine bağlı akım yolunu açar ve bobine akım uygulanır. Bu, manyetik alan oluşturarak röle kontaklarını hareket ettirir ve ana güç devresindeki yükü açar veya kapatır.
+Alternatif Akım (AC) Tetikleme:
+
+AC tetikleme için, röle bobinine alternatif akım uygulanır.
+AC tetikleme için kullanılan yöntemlerden biri, optik izolasyonlu bir triyak veya optik izolatörden oluşan bir devre kullanmaktır.
+Kontrol devresindeki optik sensör veya optik izolatör, kontrol sinyalini algılar ve bobindeki triyak veya optik izolatörü tetikler.
+Tetikleme sinyali, alternatif akım dalgasının uygun bir anında triyak veya optik izolatörü ileten bir sinyal olarak şekillenir.
+Tetikleme sinyali bobine ulaştığında, manyetik alan oluşturulur ve röle kontakları hareket eder.
+__________________________________________________________________________________________________________________________
+2-)  Transistör Nedir? NPN PNP Nedir? Transistör Nasıl Çalışır?
+
+___________________________________________________________________________________________________________________________
+3-)  Led Nedir? Ne İşe Yarar? Kaç Volttur?
+___________________________________________________________________________________________________________________________
+4-)  Elektronik Kristal Nedir? Ne işe Yarar?
+___________________________________________________________________________________________________________________________
+5-)  Kondansatör Nedir? Ne İşe Yarar?
+___________________________________________________________________________________________________________________________
+6-)  Doğrultma Nedir?
+___________________________________________________________________________________________________________________________
+7-)  Bobin (COIL) Nedir? Ne İşe Yarar?
+
+24V DC 1,2W (Bobin) -> 24V ile çalışır ve 24V gerilim uygulandığında bobinin 1.2 watt güç sarfettiği anlamına gelmektedir.
+
+__/__ 250V AC max 10A (Kontak) -> Bu röleye ait kontakların maksimum 250 volt alternatif gerilime ve maksimum 10 ampere kadar akımlara dayanabilecegini belirtir.
+
+Röle için;
+(COM)Ortak Uç: 1 ile gösterilir.
+Kapalı Uç: 2 ile gösterilir.
+Açık Uç: 4 ile gösterilir. 
+
+COM (Common): COM, "common" yani "ortak" anlamına gelir. Bir anahtarın veya rölenin ortak terminallerini temsil eder. Bu terminal, diğer bağlantı noktalarıyla bağlantılıdır ve anahtarlama veya röleme işleminin gerçekleştiği noktadır.
+
+COIL: COIL, "coil" yani "bobin" anlamına gelir. Bobin, elektromanyetik bir alan oluşturan bir sargıdır. COIL sembolü, rölenin veya elektromanyetik cihazın bobin bağlantılarını temsil eder. Bobine uygun akım uygulandığında, manyetik alan oluşturulur ve bu da rölenin veya cihazın çalışmasını etkiler.
+
+11: 1.Grubun 1. Kontagı -> Ortak Uç
+12: 1.Grubun 2. Kontagı -> Kapalı Kontagı
+14: 1.Grubun 4. Kontagı -> Açık Kontagı
+21: 2.Grubun 1. Kontagı ->
+22: 2.Grubun 2. Kontagı ->
+24: 2.Grubun 4. Kontagı ->
+
+Multimetre de direnç ölçüm kademesine getiriyoruz ve röle soketinde klemenslere ölçü aletimizin uçlarını baglıyoruz. Direnç okudugumuz kısımda bobin(coil) uçları oldugu anlamına gelmektedir.Eger herhangi bir direnç degeri göremezsek ya da sonsuz deger görürsek rölenin bobin uçları kopmuş olabilir demektir. Direnç degeri röleden röleye değişir.
+
+kontakta hareketli uca ortak uç denilir.
+___________________________________________________________________________________________________________________________
+8-)  DC Ve AC Nedir? Aralarındaki Farklar Nelerdir?
+___________________________________________________________________________________________________________________________
+9-)  Elektronik Devreler Neden DC Üzerinde Çalışır?
+___________________________________________________________________________________________________________________________
+10-) Voltaj Regülesi Nedir?
+___________________________________________________________________________________________________________________________
+11-) Tek Faz Nedir?
+___________________________________________________________________________________________________________________________
+12-) Üç Faz Nedir?
+___________________________________________________________________________________________________________________________
+13-) Nötr Nasıl Elde Edilir?
+___________________________________________________________________________________________________________________________
+14-) Elektrikte Toprak Nasıl Elde Edilir?
+___________________________________________________________________________________________________________________________
+15-) Kontaktör Nedir?											3
