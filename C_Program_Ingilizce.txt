@@ -1,0 +1,67 @@
+A) Learn the Basics
+	learn: Öğrenmek
+	basics: Temel Bilgiler
+____________________________________________________________________________________________________________________
+A.1) Hello, World!
+	hello: Merhaba
+	world: Dünya
+
+Introduction (Giriş) 
+
+The C programming language is a general purpose programming language, which relates closely to the way machines work. 
+	general: Genel
+	purpose: Amaç
+	which: Hangi
+	relates: İlgilidir
+	closely:  Yakından
+	to: ile/-e
+	way: yol / yapılış yolu / yapılış şekli / yöntem
+
+
+Understanding how computer memory works is an important aspect of the C programming language. 
+	understanding:	Anlayış
+	how: Nasıl
+	memory: Hafıza
+	aspect: Bakış Açısı / yön
+	of: İle ilgili
+	is: dır/dir
+
+
+Although C can be considered as "hard to learn", C is in fact a very simple language, with very powerful capabilities.
+
+C is a very common language, and it is the language of many applications such as Windows, the Python interpreter, Git, and many many more.
+
+C is a compiled language - which means that in order to run it, the compiler (for example, GCC or Visual Studio) must take the code that we wrote, process it, and then create an executable file. This file can then be executed, and will do what we intended for the program to do.
+
+____________________________________________________________________________________________________________________
+A.2) Variables and Types
+	variables: Değişkenler
+	and: Ve
+	Types: Türleri
+____________________________________________________________________________________________________________________
+A.3) Arrays
+	arrays: Diziler
+____________________________________________________________________________________________________________________
+A.4) Multidimensional Arrays
+	Multidimensional: Çok boyutlu
+	Arrays: Diziler
+____________________________________________________________________________________________________________________
+A.5) Conditions
+	conditions: Koşullar
+____________________________________________________________________________________________________________________
+A.6) Strings
+	____________________________________________________________________________________________________________________
+A.7) For loops
+	for: İçin
+	loops: Döngüler
+____________________________________________________________________________________________________________________
+A.8) While loops
+	while: Sırasında
+	loops: Döngüler
+____________________________________________________________________________________________________________________
+A.9) Functions
+	functions: fonksiyonlar
+____________________________________________________________________________________________________________________
+A.10) Static
+	static: Sabit
+____________________________________________________________________________________________________________________

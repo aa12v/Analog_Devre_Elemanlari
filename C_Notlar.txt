@@ -1,0 +1,49 @@
+---------------------------------------------------C Programlama---------------------------------------------------
+
+
+--int main(void){} = int main(){} //Burada void hiçlik anlamındadır yani hiç parametre almayacaktır.
+				//Burada süslü parantez içerisinde olan kısım tanımlı fonksiyonun alanı yani scope'u olarak tanımlanır.
+
+--printf()	//Ekrana yazı yazmamızı sağlayan bir fonksiyondur. İçerisindeki ifade string veri tipindedir.
+
+--return
+
+--escape char (Kaçış Karakterleri)	//  \n: Gördügünde yeni satıra geç anlamına gelir.
+					    \t: Gördüğünde 1 Tab boşluk bırak anlamına gelir.
+					    \": Metin dizisi içerisinde bir çift tırnak (") karakterini temsil eder.
+					    \': Metin dizisi içerisinde bir tek tırnak (') karakterini temsil eder.
+					    \\: Metin dizisi içinde bir ters taksim (\) karakterini temsil eder.
+
+
+Derleme Aşamaları
+1. Ön işleme (Pre-Processing)(.i dosya uzantısı elde edilir.)(Yorum satırları kaldırılır. Kütüphaneler eklenir. Makrolar eklenir.)
+2. Derleme   (Compilation)(Assembly kodu elde edilir ve dosya uzantısı .as ya da .s şeklindedir.)
+3. Çevirme   (Assembly)(Assembly kodu makina koduna dönüştürülür. .i dosya uzantısı elde edilir.)
+4. Bağlama   (Linking)(Makina kodundan executable yani exe. uzantılı dosya elde edilir.)
+
+
+gcc -E program.c	linking
+gcc -S  program.c	Compilation
+gcc -C  program.c	Assembly
+gcc -O  program.c	Linking
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

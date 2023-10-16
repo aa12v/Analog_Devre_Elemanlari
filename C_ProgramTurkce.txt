@@ -1,0 +1,3 @@
+A) Temel Bilgileri Öğren 
+	A.1) Merhaba, Dünya!
+		C programlama dili makinelerin çalışma şekliyle yakından ilgili, genel amaçlı bir programlama dilidir.

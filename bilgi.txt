@@ -1,0 +1,658 @@
+bigint: 8 byte uzunluğunda, tamsayı veri tipi.
+binary: 
+bit:
+char: Sabit uzunlukta, üzerinde işlem yapılmayacak degerler
+date: 3 byte uzunluğunda, yıl ay gün tutumu yapar
+datetime: 8 byte uzunluğunda, yıl ay gün saat dakika saniye tutumu yapar
+datetime2(7): 8 byte uzunluğunda, yıl ay gün saat dakika saniye tutumu yapar ve ek olarak 7 basamaga kadar salise tutumu yapar
+datetimeoffset(7): ülkelere göre değişen zaman farkı için değişken türü
+decimal: ondalıklı degerler tutan veri türü
+float: ondalıklı degerler tutan veri türü
+geography: cografi kordinat ve gps bilgileri için kullanılır
+geometry: geometrik degerleri
+hierarchyid:
+image:
+int:
+money:
+nchar:
+ntext:
+numeric:
+nvarchar:
+real:
+smalldatetime:
+smallint:
+smallmoney:
+sql_variant:
+text:
+time:
+timestamp:
+tinyint:
+uniqueidentifier:
+varbinary:
+varchar:
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+1) SQL VERİ TANIMLAMA DİLİ (DATA DEFINITION LANGUAGE - DDL)
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+1.1) CREATE: Oluşturmak
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+	Kullanım-1 Mantık:
+
+	(Eylem Ne? - Oluşturmak)
+	(Ne Oluşturmak? - Veri Tabanı)
+	(Veri Tabanının Adı Ne Olacak? - Veri_Tabani_isim)
+
+
+	CREATE DATABASE veritabanı_adı;
+
+
+	Komut: create database Veri_Tabani_isim
+
+	------------------------------------------
+
+	Kullanım-2 Mantık:
+
+	(Eylem Ne? - Oluşturmak)
+	(Ne Oluşturmak? - Veri Tablosu)
+	(Veri Tablosunun Adı Ne Olacak? - Veri_Tablosu_isim)
+	(Oluşturulacak Tablonun Bölümleri nelerdir? - 
+						      (sütun_Adi sütun_Veri_Tipi),
+		 				       sütun_Adi sütun_Veri_Tipi),
+						       sütun_Adi sütun_Veri_Tipi))
+
+
+	CREATE TABLE tablo_adı (
+    	sütun1 veri_tipi,
+    	sütun2 veri_tipi,
+    	...
+	)
+	
+
+
+	Komut: 	create table Veri_Tablosu_isim (
+		sütun_Adi sütun_Veri_Tipi),
+		sütun_Adi sütun_Veri_Tipi),
+		sütun_Adi sütun_Veri_Tipi))
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------									
+1.2) USE: Belirtilen veritabanını geçerli çalışma veritabanı olarak ayarlar. Veritabanı seçimi için kullanılır.
+
+	Kullanım Mantık:
+
+	(Eylem Ne? - Veritabanı Seçmek)
+	(Seçilecek Veritabanı Adı Ne? - Veri_Tabani_isim)
+	
+	USE hedef_veritabanı;
+
+	Komut: use Veri_Tabani_isim
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+1.3) ALTER: Güncelleme
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+	
+1.3.1) ADD: Ekleme
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+	Kullanım-1 Mantık:
+ 
+	(Eylem Ne? - Var Olan Tabloya Yeni Sütun Eklemek - Ekleme İşlemi)
+	(Nereye Sütun Eklemek? - Veri Tablosuna)
+	(Eklenecek Veri Tablosunun Adı Ne? - Veri_Tablosu_isim)
+	(Veri Tablosuna Ne Yapılacak? - Sütun Ekleme İşlemi)
+	(Eklenecek Sütunun Adı Ne? - sütun_Adi)
+	(Eklenecek Sütunun Veri Tipi Ne? - sütun_Veri_Tipi)
+
+
+	ALTER TABLE tablo_adı
+	ADD COLUMN yeni_sütun veri_tipi;
+
+
+	Komut: 	alter table Veri_Tablosu_isim
+		add column sütun_Adi sütun_Veri_Tipi
+
+	------------------------------------------
+
+	Kullanım-2 Mantık:
+
+	(Eylem Ne? - Var Olan Tabloya Yeni Sütunlar Eklemek - Ekleme İşlemi)
+	(Nereye Sütun Eklemek? - Veri Tablosuna)
+	(Eklenecek Veri Tablosunun Adı Ne? - Veri_Tablosu_isim)
+	(Veri Tablosuna Ne Yapılacak? - Sütun Ekleme İşlemi)
+	(Eklenecek 1.Sütunun Adı Ne? - sütun1_Adi)
+	(Eklenecek 1.Sütunun Değişken Veri Tipi Ne? - sütun1_Veri_Tipi)
+	Sütunları Birbirinden Ayıracak Noktalama İşareti Nedir? - ,)
+	(Eklenecek 2.Sütunun Adı Ne? - sütun2_Adi)
+	(Eklenecek 2.Sütunun Değişken Veri Tipi Ne? - sütun2_Veri_Tipi)
+	
+	ALTER TABLE tablo_adı
+	ADD COLUMN yeni_sütun veri_tipi
+	
+	Komut: 	alter table Veri_Tablosu_isim
+		add  column sütun1_Adi sütun1_Veri_Tipi, sütun2_Adi sütun2_Veri_Tipi
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+1.3.2) ALTER: Değişim / Güncelleme
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+	Kullanım Mantık:
+
+	(Eylem Ne? - Var Olan Tablodaki Sütunu güncellemek - Güncelleme İşlemi)
+	(Neredeki Sütun Güncellenecek? - Veri Tablosundaki)
+	(Güncellenecek Veri Tablosunun Adı Ne? - Veri_Tablosu_isim)
+	(Veri Tablosuna Ne Yapılacak? - Sütun Güncelleme İşlemi)
+	(Güncellenecek Sütunun Adı Ne? - sütun_Adi)
+	(Güncellenecek Sütunun Yeni Değişken Veri Tipi Ne? - sütun_Veri_Tipi)
+
+	ALTER TABLE tablo_adı
+	ALTER COLUMN sütun_adı yeni_veri_tipi
+
+	
+
+	Komut: 	alter table Veri_Tablosu_isim
+		alter column sütun_Adi sütun_Veri_Tipi
+
+	------------------------------------------
+
+	1.3.1) DROP: Silme
+	
+	Kullanım Mantık:
+	
+	(Eylem Ne? - Var Olan Bir Tablodan Seçilen Sütunu Silmek / Bir Nevi Tabloyu Güncelleme)
+	(Nereden Silinecek? - Veri Tablosu)
+	(Sütun Silinecek Tablonun Adı Ne? - Veri_Tablosu_isim)
+	(Veri Tablosuna Ne Yapılacak? - Sütun Silme İşlemi)
+	(Silinecek Sütunun Adı Ne? - sütun_Adi)
+
+
+	ALTER TABLE tablo_adı
+	DROP TABLE
+
+
+
+	ALTER TABLE tablo_adı
+	DROP COLUMN sütun_adı
+
+	
+	Komut: 	alter table Veri_Tablosu_isim
+		drop column sütun_Adi
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+1.4) DROP: Silme İşlemi
+
+	
+	Kullanım-1 Mantık:
+	
+	(Eylem Ne? - Var Olan Bir Tabloyu Silmek)
+	(Ne Silinecek? - Veri Tablosu)
+	(Silinecek Tablo Adı Ne? - Veri_Tablosu_isim)
+
+
+	DROP TABLE tablo_adı;
+
+	DROP DATABASE veritabanı_adı;
+
+	
+	Komut: drop table Veri_Tablosu_isim
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+	
+1.5) TRUNCATE: Veri Tablosunun içerigini sıfırlar.
+	
+	Kullanım Mantık:
+	
+	(Eylem Ne? - Var Olan Bir Tablonun İçeriğini Sıfırlamak)
+	(Neyin içeriği Silinecek? - Veri Tablosunun)
+	(Silinecek Tablo Adı Ne? - Veri_Tablosu_isim)
+	
+
+	TRUNCATE TABLE tablo_adı;
+
+
+	Komut: truncate table Veri_Tablosu_isim
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+2) SQL VERİ İŞLEME DİLİ (DATA MANIPULATION LANGUAGE - DML)
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+2.1) SELECT: Seçmek
+
+	Kullanım-1 Mantık:	
+
+	(Eylem Ne? - Bir Tablonun İçeriğini Seçmek)
+	(Hangi Sütunlar Seçilecek? - *(Tüm Sütunlar Seçilir) ya da Tek Tek Sütun İsmi Yazılır)
+	(-den, -dan Anlamında Kullanılan Anahtar Kelime - from)
+	(Seçilecek Tablo Adı Ne? - Veri_Tablosu_isim)
+
+
+	SELECT sütunlar
+	FROM tablo_adı
+	WHERE koşullar;
+	
+
+
+	Komut: 	select * 
+		from Veri_Tablosu_isim
+		where kosul
+
+	------------------------------------------
+
+	Kullanım-2 Mantık:	
+
+	(Eylem Ne? - Bir Tabloda Bulunan Sütundan İstenilen İçeriği Seçmek - Aranan Kelime Direkt Bulunmalı)
+	(Hangi Sütunlar Seçilecek? - *(Tüm Sütunlar Seçilir) ya da Tek Tek Sütun İsmi Yazılır)
+	(-den, -dan Anlamında Kullanılan Anahtar Kelime - from)
+	(Seçilecek Tablo Adı Ne? - Veri_Tablosu_isim)
+	(Anahtar Kelime - where)
+	(Değer Aranacak / Seçilecek Sütunun Adı Ne? - sütun_Adi)
+	(Noktalama İşareti Nedir? - =)
+	(Sütunda Aranacak Tam Kelime Nedir? - 'aranacakKelime')
+
+	Komut: 	select * 
+		from Veri_Tablosu_isim 
+		where sütun_Adi = 'aranacakKelime'
+	
+	komut: 	select sütun1_Adi, sütun2_Adi, sütun3_Adi 
+		from Veri_Tablosu_isim
+		where kosul
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+2.2) AND, OR, IN:
+	and: Yazılan durumların tamamı gerçekleşiyorsa kabul eder.
+	or: Yazılan durumların içerisinden en az birini sağlıyorsa kabul eder.
+	in: Belirli değer ya da değerlerin bulunup bulunmadığını kontrol eder.
+	
+	------------------------------------------
+
+	Kullanım-1 Mantık:
+
+	(Eylem Ne? - Bir Tabloda Bulunan Sütunlardan İstenilen İçeriği Seçmek)
+	(Hangi Sütunlar Seçilecek? - *(Tüm Sütunlar Seçilir) ya da Tek Tek Sütun İsmi Yazılır)
+	(-den, -dan Anlamında Kullanılan Anahtar Kelime - from)
+	(Seçilecek Tablo Adı Ne? - Veri_Tablosu_isim)
+	(Anahtar Kelime - where)
+	(Değer Aranacak / Seçilecek Sütunun Adı Ne? - sütun1_Adi)
+	(Noktalama İşareti Nedir? - =, >, <)
+	(Sütunda Aranacak Tam Kelime Nedir? - 'aranacakKelime1')
+	(Anahtar Kelime - and)
+	(Değer Aranacak / Seçilecek Sütunun Adı Ne? - sütun2_Adi)
+	(Noktalama İşareti Nedir? - =, >, <)
+	(Sütunda Aranacak Tam Kelime Nedir? - 'aranacakKelime2')
+	(Anahtar Kelime - and)
+	(Değer Aranacak / Seçilecek Sütunun Adı Ne? - sütun3_Adi)
+	(Noktalama İşareti Nedir? - =, >, <)
+	(Sütunda Aranacak Tam Kelime Nedir? - 'aranacakKelime3')
+
+	
+	SELECT *
+	FROM musteriler
+	WHERE sehir = 'İstanbul' AND abonelik_durumu = 'Akt
+if';
+
+	
+
+	Komut: select * from Veri_Tablosu_isim where sütun1_Adi = 'aranacakKelime1' and sütun2_Adi < 'aranacakKelime2' and sütun3_Adi > 'aranacakKelime3'
+
+	------------------------------------------
+
+	Kullanım-2 Mantık:
+
+	(Eylem Ne? - Bir Tabloda Bulunan Sütunlardan İstenilen İçeriği Seçmek)
+	(Hangi Sütunlar Seçilecek? - *(Tüm Sütunlar Seçilir) ya da Tek Tek Sütun İsmi Yazılır)
+	(-den, -dan Anlamında Kullanılan Anahtar Kelime - from)
+	(Seçilecek Tablo Adı Ne? - Veri_Tablosu_isim)
+	(Anahtar Kelime - where)
+	(Değer Aranacak / Seçilecek Sütunun Adı Ne? - sütun1_Adi)
+	(Noktalama İşareti Nedir? - =, >, <)
+	(Sütunda Aranacak Tam Kelime Nedir? - 'aranacakKelime1')
+	(Anahtar Kelime - or)
+	(Değer Aranacak / Seçilecek Sütunun Adı Ne? - sütun2_Adi)
+	(Noktalama İşareti Nedir? - =, >, <)
+	(Sütunda Aranacak Tam Kelime Nedir? - 'aranacakKelime2')
+	(Anahtar Kelime - or)
+	(Değer Aranacak / Seçilecek Sütunun Adı Ne? - sütun3_Adi)
+	(Noktalama İşareti Nedir? - =, >, <)
+	(Sütunda Aranacak Tam Kelime Nedir? - 'aranacakKelime3')
+
+
+	SELECT *
+	FROM musteriler
+	WHERE sehir = 'New York' OR sehir = 'Los Angeles';
+	
+
+	Komut: select * from Veri_Tablosu_isim where sütun1_Adi = 'aranacakKelime1' or sütun2_Adi < 'aranacakKelime2' or sütun3_Adi > 'aranacakKelime3'
+
+	------------------------------------------
+
+	Kullanım-3 Mantık:
+
+	(Eylem Ne? - Bir Tabloda Bulunan Sütunlardan İstenilen İçeriği Seçmek)
+	(Hangi Sütunlar Seçilecek? - *(Tüm Sütunlar Seçilir) ya da Tek Tek Sütun İsmi Yazılır)
+	(-den, -dan Anlamında Kullanılan Anahtar Kelime - from)
+	(Seçilecek Tablo Adı Ne? - Veri_Tablosu_isim)
+	(Anahtar Kelime - where)
+	(Değer Aranacak / Seçilecek Sütunun Adı Ne? - sütun1_Adi)
+	(Anahtar Kelime - in)
+	(Sütunda Aranacak Tam Kelime Nedir? - (aranacakKelime1, aranacakKelime2))
+	
+
+	SELECT *
+	FROM musteriler
+	WHERE sehir IN ('New York', 'Los Angeles');
+
+
+	Komut: select * from Veri_Tablosu_isim where sütun1_Adi in(aranacakKelime1, aranacakKelime2)
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+2.3) LIKE:
+	not like: like anahtar kelimesinin tam tersi şekilde işler.
+
+	------------------------------------------
+
+	Kullanım-1 Mantık:
+
+	(Eylem Ne? - Bir Tabloda Bulunan Sütunlardan İstenilen İçeriği Seçmek)
+	(Hangi Sütunlar Seçilecek? - *(Tüm Sütunlar Seçilir) ya da Tek Tek Sütun İsmi Yazılır)
+	(-den, -dan Anlamında Kullanılan Anahtar Kelime - from)
+	(Seçilecek Tablo Adı Ne? - Veri_Tablosu_isim)
+	(Anahtar Kelime - where)
+	(Değer Aranacak / Seçilecek Sütunun Adı Ne? - sütun1_Adi)
+	(Anahtar Kelime - like)
+	(Noktalama İşareti Nedir? - %)
+	(Sütunda Aranacak Tam Kelime Nedir? - 'aranacakKelime1')
+	
+	SELECT *
+	FROM musteriler
+	WHERE soyad LIKE 'Johnson'
+
+
+	SELECT *
+	FROM musteriler
+	WHERE soyad LIKE 'Smith%'
+
+	
+	SELECT *
+	FROM musteriler
+	WHERE ad LIKE '%John%'
+
+
+	Komut: select * from Veri_Tablosu_isim where sütun1_Adi like 'aranacakKelime1%' //Baş kısmında o kelime bulunur.
+	Komut: select * from Veri_Tablosu_isim where sütun1_Adi like '%aranacakKelime1%' //içerisinde o kelime bulunur.
+	Komut: select * from Veri_Tablosu_isim where sütun1_Adi like '%aranacakKelime1' //Son kısmında o kelime bulunur.
+
+
+ (Köşeli Parantezler):
+
+Köşeli parantezler, belirli karakterlerin herhangi birini temsil etmek için kullanılır.
+Örneğin, '[abc]' ifadesi "a," "b" veya "c" harfinden herhangi birini içeren herhangi bir karakter dizisini döndürecektir.
+
+
+Karakter Aralıkları ile Eşleştirme:
+
+Köşeli parantezler içinde karakterlerin aralıkları da belirtilebilir. İki karakter arasına tire (-) koyarak aralık belirtilir.
+Örneğin, '[a-c]' ifadesi "a," "b" veya "c" harflerini içeren herhangi bir karakteri eşleştirir.
+
+
+Birden Fazla Köşeli Parantez Kullanımı:
+
+Birden fazla köşeli parantez ifadesi bir arada kullanılabilir. Bu, birden fazla karakter kümesinin eşleştirilmesine olanak tanır.
+Örneğin, '[A-Za-z]' ifadesi hem büyük hem de küçük harf içeren herhangi bir karakteri eşleştirir.
+
+Türkçe Karakter Desteği:
+
+Köşeli parantezler aynı zamanda Türkçe karakterler gibi özel karakterlerin eşleştirilmesi için de kullanılabilir.
+Örneğin, '[çÇğĞıİöÖşŞüÜ]' ifadesi Türkçe karakterleri içeren herhangi bir karakteri eşleştirir.
+
+[^ ] (Köşeli Parantezler ve Üst Ünlem):
+
+"[^abc]" ifadesi, "a," "b" veya "c" harfinden herhangi birini içermeyen karakter dizilerini döndürecektir.
+
+	------------------------------------------
+
+	Kullanım-2 Mantık:
+
+	(Eylem Ne? - Bir Tabloda Bulunan Sütunlardan İstenilen İçeriği Seçmek)
+	(Hangi Sütunlar Seçilecek? - *(Tüm Sütunlar Seçilir) ya da Tek Tek Sütun İsmi Yazılır)
+	(-den, -dan Anlamında Kullanılan Anahtar Kelime - from)
+	(Seçilecek Tablo Adı Ne? - Veri_Tablosu_isim)
+	(Anahtar Kelime - where)
+	(Değer Aranacak / Seçilecek Sütunun Adı Ne? - sütun1_Adi)
+	(Anahtar Kelime - like)
+	(Noktalama İşareti Nedir? - _)
+	(Sütunda Aranacak Tam Kelime Nedir? - 'xx_x')
+	
+
+	Komut: select * from Veri_Tablosu_isim where sütun1_Adi like 'xx_x' 
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+2.4) INSERT INTO: Veri kaydetmek
+
+	------------------------------------------
+	
+	Kullanım-1 Mantık:
+
+	(Eylem Ne? - Bir Tabloda Seçilen Sütuna İstenilen İçeriği Eklemek)
+	(Eklenecek Tablo Adı Ne? - Veri_Tablosu_isim)
+	(Anahtar Kelime - values())
+	(Eklenecek Veriler Neler? - Sütun1_Deger, Sütun2_Deger, Sütun3_Deger)
+
+	
+	INSERT INTO tablo_adı (sütun1, sütun2, sütun3, ...)
+	VALUES (değer1, değer2, değer3, ...);
+
+
+	Komut: insert into Veri_Tablosu_isim values(Sütun1_Deger, Sütun2_Deger, Sütun3_Deger)
+
+	------------------------------------------
+	
+	Kullanım-2 Mantık:
+
+	(Eylem Ne? - Bir Tabloda Seçilen Sütuna İstenilen İçeriği Eklemek)
+	(Eklenecek Tablo Adı Ne? - Veri_Tablosu_isim())
+	(Seçilen Tabloda İşlem Yapılacak Sütun İsimleri - sütun1_Adi, sütun2_Adi, sütun3_Adi)
+	(Anahtar Kelime - values())
+	(Eklenecek Veriler Neler? - Sütun1_Deger, Sütun2_Deger, Sütun3_Deger)
+	
+
+	INSERT INTO tablo_adı (sütun1, sütun2, sütun3, ...)
+	VALUES (değer1, değer2, değer3, ...)
+
+	Komut: 	insert into Veri_Tablosu_isim(sütun1_Adi, sütun2_Adi, sütun3_Adi)
+		values(Sütun1_Deger, Sütun2_Deger, Sütun3_Deger)
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+2.5) UDPATE: Güncellemek
+
+	------------------------------------------
+
+	Kullanım Mantık:
+
+	(Eylem Ne? - Bir Tabloda Seçilen Sütunu İstenilen Değerle Güncellemek)
+	(Eklenecek Tablo Adı Ne? - Veri_Tablosu_isim)
+	(Anahtar Kelime - set)
+	(Seçilen Tabloda İşlem Yapılacak Sütun İsmi - sütun_Adi)
+	(Noktalama İşareti Nedir? - =)
+	(Eklenecek Veri Nedir? - 'Sütun_Deger')
+	(Anahtar Kelime - where)
+	(Şart Durumu Nedir? sart_Durum)
+
+
+	UPDATE tablo_adı
+	SET sütun1 = yeni_değer1, sütun2 = yeni_değer2
+	WHERE koşul
+	
+
+	Komut: 	update Veri_Tablosu_isim
+		set sütun_Adi='Sütun_Deger'
+		where sart_Durum
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+2.6) DELETE: Veri silmek
+
+	------------------------------------------
+
+	Kullanım-1 Mantık:
+
+	(Eylem Ne? - Var Olan Bir Tablonun İçeriğini Silmek)
+	(-den, -dan Anlamında Kullanılan Anahtar Kelime - from)
+	(Silinecek Tablo Adı Ne? - Veri_Tablosu_isim)
+	
+	DELETE FROM tablo_adı
+	WHERE koşul
+
+	
+	Komut: 	delete from Veri_Tablosu_isim
+
+	------------------------------------------
+
+	Kullanım-2 Mantık:
+
+	(Eylem Ne? - Var Olan Bir Tablonun İçeriğini Silmek)
+	(-den, -dan Anlamında Kullanılan Anahtar Kelime - from)
+	(Silinecek Tablo Adı Ne? - Veri_Tablosu_isim)
+	(Silinecek Durum Nedir? - kosul)
+	
+	DELETE FROM tablo_adı
+	WHERE koşul
+
+	Komut: delete from Veri_Tablosu_isim 
+		where kosul
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+2.7) DISTINCT: Benzersiz Veri
+
+	------------------------------------------
+
+	Kullanım Mantık:
+
+	(Eylem Ne? - Var Olan Bir Tabloda Seçilen Sütunun İçeriğini Benzersiz Şekilde Getirmek)
+	(Anahtar Kelime - distinct)
+	(Benzersiz Hale Getirilecek Sütunun Adı Ne? - sütun_Adi)
+	(-den, -dan Anlamında Kullanılan Anahtar Kelime - from)
+	(Silinecek Tablo Adı Ne? - Veri_Tablosu_isim)
+	
+	SELECT DISTINCT sutun_adı
+	FROM tablo_adı
+
+
+	Komut: select distinct sütun_Adi from Veri_Tablosu_isim
+
+---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------
+
+2.8) ORDER BY: Sıralama
+	ASC: Artan Sıralama
+	DESC: Azalan Sıralama
+
+	------------------------------------------
+
+
+	KOMUT:
+
+	SELECT sutun1, sutun2 ya da *
+	FROM tablo_adı
+	ORDER BY sıralama_sütunu ASC | DESC
+
+
+
+2.9) BETWEEN: Aralığındaki
+
+	------------------------------------------
+
+	SELECT sütunlar
+	FROM tablo_adı
+	WHERE sütun_adı BETWEEN değer1 AND değer2
+
+	
+2.10) CHECK: Kontrol
+
+	------------------------------------------
+
+	CREATE TABLE tablo_adı (
+    	sütun_adı veri_tipi CHECK (koşul)
+	)
+
+	CREATE TABLE musteriler (
+   	 musteri_id INT PRIMARY KEY,
+   	 ad VARCHAR(50),
+   	 soyad VARCHAR(50),
+    	yas INT CHECK (yas >= 18 AND yas <= 100)
+	)
+
+	------------------------------------------
+
+	CREATE TABLE musteriler (
+   	 musteri_id INT,
+    	ad VARCHAR(50),
+    	soyad VARCHAR(50),
+    	CONSTRAINT pk_musteriler PRIMARY KEY (musteri_id)
+	)
+
+
+	CREATE TABLE siparisler (
+   	 siparis_id INT PRIMARY KEY,
+    	musteri_id INT,
+    	siparis_tarihi DATE,
+   	 CONSTRAINT fk_siparisler_musteriler FOREIGN KEY (musteri_id) REFERENCES musteriler (musteri_id)
+	)
+
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+2.11) as:
+
+
+2.12) SUBSTRING:
+
+SELECT SUBSTRING('Merhaba, dünya!', 1, 7)
+
+2.13) left
+2.14) right
+2.15) upper
+2.16) lower
+2.17) len
+2.18) replace
+2.19) reverse
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+3) SQL VERİ KONTROL DİLİ (DATA CONTROL LANGUAGE - DCL)
+3.1) GRANT:
+3.2) DENY:
+3.3) REVOKE:
+
+--------------------------------------------------------------------------------------------------------------------
